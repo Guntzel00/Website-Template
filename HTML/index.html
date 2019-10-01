@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>   
+        clearConsole();
+        console.group("HTML Section");
+        startTimer("pageload-html");  
+
+        class DebugInfo
+            {
+                constructor()
+                {                                 
+                this.htmlTime = 0;
+                this.headTime = 0;
+                this.bodyTime = 0;     
+                this.footerTime = 0;                      
+                }                
+            }
+
+        let debugInfo = new DebugInfo();
+
+
+        function clearConsole()
+        {
+            console.clear();
+            }
+
+        function startTimer(group)
+            {
+            return console.time(group);
+            }
+
+        function endTimer(group)
+            {
+            return console.timeEnd(group);
+            }                 
+    </script>
+<head>
+    <script>
+		console.group("HEAD SECTION");
+		startTimer("pageload-head");
+	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <title>Heelo</title>
+    <script>
+            debugInfo.htmlTime = endTimer("pageload-head");    
+            console.groupEnd("HEAD SECTION");  
+    </script>
+</head>
+<body>
+    <script>
+            console.group("BODY SECTION");
+            startTimer("pageload-body");
+    </script>
+    <header>
+        <div id="logo"><a href="#"><img src="../IMG/Logo.png" alt="Our Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Sing In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="indexPage showcase">
+        <div class="bubblesSection">
+            <div class="bubbles" id="bubble1"></div>
+            <div class="bubbles" id="bubble2"></div>
+            <div class="bubbles" id="bubble3"><p>"Discover".</p></div>
+            <div class="bubbles" id="bubble4"></div>
+        </div>
+        <div class="text">
+            <h2>For all the times</h2>
+            <h2><span>Anywhere</span></h2>
+        </div>
+    </div>
+    <div class="indexPage features">
+        <div class="box">
+            <div>
+                <img src="../IMG/card.png" alt="Credit Card icon">
+            </div>
+            <div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod neque quas consequuntur sit molestiae? Aut.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <img src="../IMG/cellphone.png" alt="Cellphone icon">
+            </div>
+            <div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod neque quas consequuntur sit molestiae? Aut.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <img src="../IMG/computer.png" alt="Computer icon">
+            </div>
+            <div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod neque quas consequuntur sit molestiae? Aut.</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="indexPage concept">
+        <div class="manWithCamera">
+            <img src="/IMG/manWithCamera.jpg" alt="A man with a camera">
+        </div>
+        <div class="text">
+            <h2>Your photos, our cloud.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsum earum molestias autem ipsa at quo a. Tempora consequatur fugiat exercitationem accusantium iusto, asperiores praesentium dolorum odio iste voluptatum officiis repellendus quibusdam aperiam eligendi dolore in optio ea nisi animi?</p>
+        </div>
+        <div class="randomText">
+            <h2>Your photos, our cloud.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsum earum molestias autem ipsa at quo a. Tempora consequatur fugiat exercitationem accusantium iusto, asperiores praesentium dolorum odio iste voluptatum officiis repellendus quibusdam aperiam eligendi dolore in optio ea nisi animi?</p>
+        </div>
+        <div class="random">
+                <img src="/IMG/woman-407168_1920.jpg" alt="A man with a camera">
+        </div>
+    </div> -->
+    <footer>
+        <p>All rights reserved Heelo &copy; 2019</p>
+    </footer>
+    <script>
+            debugInfo.htmlTime = endTimer("pageload-body");    
+            console.groupEnd("BODY Section");  
+    </script>
+</body>
+<script>
+    debugInfo.htmlTime = endTimer("pageload-html");    
+    console.groupEnd("HTML Section");  
+</script>
+</html>
